@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.9.8)  1 OCT 2024 02:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.9.8)  2 OCT 2024 03:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -593,36 +593,433 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
 )
+(/usr/share/texlive/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
+
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks31
+\pgfutil@tempdima=\dimen174
+\pgfutil@tempdimb=\dimen175
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
+ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box53
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
+))
+Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks32
+\pgfkeys@temptoks=\toks33
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.t
+ex
+\pgfkeys@tmptoks=\toks34
+))
+\pgf@x=\dimen176
+\pgf@y=\dimen177
+\pgf@xa=\dimen178
+\pgf@ya=\dimen179
+\pgf@xb=\dimen180
+\pgf@yb=\dimen181
+\pgf@xc=\dimen182
+\pgf@yc=\dimen183
+\pgf@xd=\dimen184
+\pgf@yd=\dimen185
+\w@pgf@writea=\write3
+\r@pgf@reada=\read3
+\c@pgf@counta=\count291
+\c@pgf@countb=\count292
+\c@pgf@countc=\count293
+\c@pgf@countd=\count294
+\t@pgf@toka=\toks35
+\t@pgf@tokb=\toks36
+\t@pgf@tokc=\toks37
+\pgf@sys@id@count=\count295
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
+f
+File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
+tex
+File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfsyssoftpath@smallbuffer@items=\count296
+\pgfsyssoftpath@bigbuffer@items=\count297
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
+tex
+File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen186
+\pgfmath@count=\count298
+\pgfmath@box=\box54
+\pgfmath@toks=\toks38
+\pgfmath@stack@operand=\toks39
+\pgfmath@stack@operation=\toks40
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonomet
+ric.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
+thmetics.code.tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count299
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
+x
+File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@picminx=\dimen187
+\pgf@picmaxx=\dimen188
+\pgf@picminy=\dimen189
+\pgf@picmaxy=\dimen190
+\pgf@pathminx=\dimen191
+\pgf@pathmaxx=\dimen192
+\pgf@pathminy=\dimen193
+\pgf@pathmaxy=\dimen194
+\pgf@xx=\dimen195
+\pgf@xy=\dimen196
+\pgf@yx=\dimen197
+\pgf@yy=\dimen198
+\pgf@zx=\dimen199
+\pgf@zy=\dimen256
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
+code.tex
+File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@path@lastx=\dimen257
+\pgf@path@lasty=\dimen258
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
+.tex
+File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@shorten@end@additional=\dimen259
+\pgf@shorten@start@additional=\dimen260
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
+x
+File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfpic=\box55
+\pgf@hbox=\box56
+\pgf@layerbox@main=\box57
+\pgf@picture@serial@count=\count300
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
+ode.tex
+File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgflinewidth=\dimen261
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
+s.code.tex
+File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@pt@x=\dimen262
+\pgf@pt@y=\dimen263
+\pgf@pt@temp=\dimen264
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.t
+ex
+File: pgfcoreobjects.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing
+.code.tex
+File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
+x
+File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfarrowsep=\dimen265
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@max=\dimen266
+\pgf@sys@shading@range@num=\count301
+\pgf@shadingcount=\count302
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
+tex
+File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfexternal@startupbox=\box58
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
+x
+File: pgfcorelayers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.c
+ode.tex
+File: pgfcoretransparency.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
+tex
+File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfnodeparttextbox=\box59
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
+.sty
+Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@nodesepstart=\dimen267
+\pgf@nodesepend=\dimen268
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
+.sty
+Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
+)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen269
+\pgffor@skip=\dimen270
+\pgffor@stack=\toks41
+\pgffor@toks=\toks42
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
+.code.tex
+File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@plot@mark@count=\count303
+\pgfplotmarksize=\dimen271
+)
+\tikz@lastx=\dimen272
+\tikz@lasty=\dimen273
+\tikz@lastxsaved=\dimen274
+\tikz@lastysaved=\dimen275
+\tikz@lastmovetox=\dimen276
+\tikz@lastmovetoy=\dimen277
+\tikzleveldistance=\dimen278
+\tikzsiblingdistance=\dimen279
+\tikz@figbox=\box60
+\tikz@figbox@bg=\box61
+\tikz@tempbox=\box62
+\tikz@tempbox@bg=\box63
+\tikztreelevel=\count304
+\tikznumberofchildren=\count305
+\tikznumberofcurrentchild=\count306
+\tikz@fig@count=\count307
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfmatrixcurrentrow=\count308
+\pgfmatrixcurrentcolumn=\count309
+\pgf@matrix@numberofcolumns=\count310
+)
+\tikz@expandcount=\count311
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+\t@pgfplots@toka=\toks43
+\t@pgfplots@tokb=\toks44
+\t@pgfplots@tokc=\toks45
+\pgfplots@tmpa=\dimen280
+\c@pgfplots@coordindex=\count312
+\c@pgfplots@scanlineindex=\count313
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code
+.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_loader.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
+tructure.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
+tructureext.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray
+.code.tex
+\c@pgfplotsarray@tmp=\count314
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatri
+x.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshare
+d.code.tex
+\c@pgfplotstable@counta=\count315
+\t@pgfplotstable@a=\toks46
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.te
+x
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.co
+de.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.sur
+fshading.code.tex
+\c@pgfplotslibrarysurf@no=\count316
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surf
+shading.pgfsys-pdftex.def)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.
+tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.t
+ex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.cod
+e.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.
+tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.cod
+e.tex
+\pgfdecoratedcompleteddistance=\dimen281
+\pgfdecoratedremainingdistance=\dimen282
+\pgfdecoratedinputsegmentcompleteddistance=\dimen283
+\pgfdecoratedinputsegmentremainingdistance=\dimen284
+\pgf@decorate@distancetomove=\dimen285
+\pgf@decorate@repeatstate=\count317
+\pgfdecorationsegmentamplitude=\dimen286
+\pgfdecorationsegmentlength=\dimen287
+)
+\tikz@lib@dec@box=\box64
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.pathmorphing.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
+decorations.pathmorphing.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.pathreplacing.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
+decorations.pathreplacing.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.co
+ntourlua.code.tex)
+\pgfplots@numplots=\count318
+\pgfplots@xmin@reg=\dimen288
+\pgfplots@xmax@reg=\dimen289
+\pgfplots@ymin@reg=\dimen290
+\pgfplots@ymax@reg=\dimen291
+\pgfplots@zmin@reg=\dimen292
+\pgfplots@zmax@reg=\dimen293
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.co
+de.tex
+File: pgflibraryplotmarks.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))) (/usr/share/texlive/texmf-dist/tex/latex/pgfplots/pgfplotstable.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplotstable 2021/05/15 v1.18.1 Table typesetting and Pretty-printing
+ (1.18.1)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable.code
+.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable.colt
+ype.code.tex)) (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
+\col@sep=\dimen294
+\ar@mcellbox=\box65
+\extrarowheight=\dimen295
+\NC@list=\toks47
+\extratabsurround=\skip62
+\backup@length=\skip63
+\ar@cellbox=\box66
+))
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count291
-\l__pdf_internal_box=\box53
+\l__color_backend_stack_int=\count319
+\l__pdf_internal_box=\box67
 )
 (./3_1_3.aux)
 \openout1 = `3_1_3.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Info: Redefining \th on input line 19.
-Package hyperref Info: Link coloring ON on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Info: Redefining \th on input line 27.
+Package hyperref Info: Link coloring ON on input line 27.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -632,15 +1029,15 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count292
+\c@section@level=\count320
 )
-LaTeX Info: Redefining \ref on input line 19.
-LaTeX Info: Redefining \pageref on input line 19.
-LaTeX Info: Redefining \nameref on input line 19.
+LaTeX Info: Redefining \ref on input line 27.
+LaTeX Info: Redefining \pageref on input line 27.
+LaTeX Info: Redefining \nameref on input line 27.
 
 (./3_1_3.out) (./3_1_3.out)
-\@outlinefile=\write3
-\openout3 = `3_1_3.out'.
+\@outlinefile=\write4
+\openout4 = `3_1_3.out'.
 
 
 *geometry* driver: auto-detecting
@@ -679,17 +1076,17 @@ LaTeX Info: Redefining \nameref on input line 19.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count293
-\scratchdimen=\dimen174
-\scratchbox=\box54
-\nofMPsegments=\count294
-\nofMParguments=\count295
-\everyMPshowfont=\toks31
-\MPscratchCnt=\count296
-\MPscratchDim=\dimen175
-\MPnumerator=\count297
-\makeMPintoPDFobject=\count298
-\everyMPtoPDFconversion=\toks32
+\scratchcounter=\count321
+\scratchdimen=\dimen296
+\scratchbox=\box68
+\nofMPsegments=\count322
+\nofMParguments=\count323
+\everyMPshowfont=\toks48
+\MPscratchCnt=\count324
+\MPscratchDim=\dimen297
+\MPnumerator=\count325
+\makeMPintoPDFobject=\count326
+\everyMPtoPDFconversion=\toks49
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -699,123 +1096,145 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 22.
+Package pgfplots notification 'compat/show suggested version=true': you might b
+enefit from \pgfplotsset{compat=1.18} (current compat level: 1.9).
 
+LaTeX Font Info:    Trying to load font information for U+msa on input line 30.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 22.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 30.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
-LaTeX Warning: Command \cyrd invalid in math mode on input line 30.
+LaTeX Warning: Command \cyrd invalid in math mode on input line 37.
 
 
-LaTeX Warning: Command \cyri invalid in math mode on input line 30.
+LaTeX Warning: Command \cyri invalid in math mode on input line 37.
 
 
-LaTeX Warning: Command \cyrp invalid in math mode on input line 30.
+LaTeX Warning: Command \cyrp invalid in math mode on input line 37.
+
+Missing character: There is no ä in font cmr8!
+Missing character: There is no è in font cmr8!
+Missing character: There is no ï in font cmr8!
+
+LaTeX Warning: Command \cyrd invalid in math mode on input line 37.
+
+
+LaTeX Warning: Command \cyri invalid in math mode on input line 37.
+
+
+LaTeX Warning: Command \cyrp invalid in math mode on input line 37.
 
 Missing character: There is no ä in font cmr8!
 Missing character: There is no è in font cmr8!
 Missing character: There is no ï in font cmr8!
 
-LaTeX Warning: Command \cyrd invalid in math mode on input line 30.
+Overfull \hbox (27.92763pt too wide) detected at line 38
+[] \OT1/cmr/m/n/12 = [[] \OMS/cmsy/m/n/12 ^^B []\OT1/cmr/m/n/12 ][]
+ []
 
 
-LaTeX Warning: Command \cyri invalid in math mode on input line 30.
+Overfull \hbox (26.33565pt too wide) detected at line 40
+[] \OT1/cmr/m/n/12 = ([] \OMS/cmsy/m/n/12 ^^A r\OT1/cmr/m/n/12 )[][]
+ []
 
 
-LaTeX Warning: Command \cyrp invalid in math mode on input line 30.
+Overfull \hbox (229.9078pt too wide) detected at line 41
+\OML/cmm/m/it/12 F[] \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 ^^@[][]
+ []
 
-Missing character: There is no ä in font cmr8!
-Missing character: There is no è in font cmr8!
-Missing character: There is no ï in font cmr8!
+
+Overfull \hbox (129.37108pt too wide) detected at line 42
+\OML/cmm/m/it/12 F[] \OT1/cmr/m/n/12 = [][]
+ []
+
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<1.png, id=17, 182.6825pt x 192.72pt>
+<1.png, id=21, 182.6825pt x 192.72pt>
 File: 1.png Graphic file (type png)
 <use 1.png>
-Package pdftex.def Info: 1.png  used on input line 54.
+Package pdftex.def Info: 1.png  used on input line 59.
 (pdftex.def)             Requested size: 182.68204pt x 192.71951pt.
-<2.png, id=18, 229.85875pt x 391.4625pt>
+<2.png, id=22, 229.85875pt x 391.4625pt>
 File: 2.png Graphic file (type png)
 <use 2.png>
-Package pdftex.def Info: 2.png  used on input line 60.
+Package pdftex.def Info: 2.png  used on input line 65.
 (pdftex.def)             Requested size: 229.85817pt x 391.46153pt.
  [2 <./1.png>]
-<3.png, id=25, 230.8625pt x 354.32375pt>
+<3.png, id=28, 230.8625pt x 354.32375pt>
 File: 3.png Graphic file (type png)
 <use 3.png>
-Package pdftex.def Info: 3.png  used on input line 70.
+Package pdftex.def Info: 3.png  used on input line 75.
 (pdftex.def)             Requested size: 230.86192pt x 354.32288pt.
  [3 <./2.png>] [4 <./3.png>]
 
-LaTeX Warning: Command \cyrg invalid in math mode on input line 88.
+LaTeX Warning: Command \cyrg invalid in math mode on input line 93.
 
 
-LaTeX Warning: Command \cyrr invalid in math mode on input line 88.
+LaTeX Warning: Command \cyrr invalid in math mode on input line 93.
 
 
-LaTeX Warning: Command \cyrg invalid in math mode on input line 88.
+LaTeX Warning: Command \cyrg invalid in math mode on input line 93.
 
 
-LaTeX Warning: Command \cyrr invalid in math mode on input line 88.
+LaTeX Warning: Command \cyrr invalid in math mode on input line 93.
 
 Missing character: There is no ã in font cmr8!
 Missing character: There is no ð in font cmr8!
 Missing character: There is no ã in font cmr8!
 Missing character: There is no ð in font cmr8!
-<4.png, id=35, 600.2425pt x 295.1025pt>
+<4.png, id=38, 600.2425pt x 295.1025pt>
 File: 4.png Graphic file (type png)
 <use 4.png>
-Package pdftex.def Info: 4.png  used on input line 91.
+Package pdftex.def Info: 4.png  used on input line 96.
 (pdftex.def)             Requested size: 600.24103pt x 295.10176pt.
 
-Overfull \hbox (116.54416pt too wide) in paragraph at lines 91--92
+Overfull \hbox (116.54416pt too wide) in paragraph at lines 96--97
  [] 
  []
 
 [5 <./4.png>]
 
-LaTeX Warning: Command \cyrs invalid in math mode on input line 212.
+LaTeX Warning: Command \cyrs invalid in math mode on input line 217.
 
 
-LaTeX Warning: Command \cyrm invalid in math mode on input line 212.
+LaTeX Warning: Command \cyrm invalid in math mode on input line 217.
 
 
-LaTeX Warning: Command \cyrs invalid in math mode on input line 212.
+LaTeX Warning: Command \cyrs invalid in math mode on input line 217.
 
 Missing character: There is no ñ in font cmr8!
 Missing character: There is no ì in font cmr8!
 Missing character: There is no ñ in font cmr8!
 
-LaTeX Warning: Command \cyrs invalid in math mode on input line 212.
+LaTeX Warning: Command \cyrs invalid in math mode on input line 217.
 
 
-LaTeX Warning: Command \cyrm invalid in math mode on input line 212.
+LaTeX Warning: Command \cyrm invalid in math mode on input line 217.
 
 Missing character: There is no ñ in font cmr12!
 Missing character: There is no ì in font cmr12!
 
-LaTeX Warning: Command \cyrn invalid in math mode on input line 224.
+LaTeX Warning: Command \cyrn invalid in math mode on input line 229.
 
 
-LaTeX Warning: Command \cyra invalid in math mode on input line 224.
+LaTeX Warning: Command \cyra invalid in math mode on input line 229.
 
 
-LaTeX Warning: Command \cyrg invalid in math mode on input line 224.
+LaTeX Warning: Command \cyrg invalid in math mode on input line 229.
 
 
-LaTeX Warning: Command \cyrr invalid in math mode on input line 224.
+LaTeX Warning: Command \cyrr invalid in math mode on input line 229.
 
 
-LaTeX Warning: Command \cyrg invalid in math mode on input line 224.
+LaTeX Warning: Command \cyrg invalid in math mode on input line 229.
 
 Missing character: There is no í in font cmr8!
 Missing character: There is no à in font cmr8!
@@ -823,32 +1242,32 @@ Missing character: There is no ã in font cmr8!
 Missing character: There is no ð in font cmr8!
 Missing character: There is no ã in font cmr12!
 
-LaTeX Warning: Command \cyrc invalid in math mode on input line 224.
+LaTeX Warning: Command \cyrc invalid in math mode on input line 229.
 
 
-LaTeX Warning: Command \cyre invalid in math mode on input line 224.
+LaTeX Warning: Command \cyre invalid in math mode on input line 229.
 
 
-LaTeX Warning: Command \cyrp invalid in math mode on input line 224.
+LaTeX Warning: Command \cyrp invalid in math mode on input line 229.
 
 
-LaTeX Warning: Command \cyrg invalid in math mode on input line 224.
+LaTeX Warning: Command \cyrg invalid in math mode on input line 229.
 
 Missing character: There is no ö in font cmr8!
 Missing character: There is no å in font cmr8!
 Missing character: There is no ï in font cmr8!
 Missing character: There is no ã in font cmr12!
 
-LaTeX Warning: Command \cyro invalid in math mode on input line 224.
+LaTeX Warning: Command \cyro invalid in math mode on input line 229.
 
 
-LaTeX Warning: Command \cyrb invalid in math mode on input line 224.
+LaTeX Warning: Command \cyrb invalid in math mode on input line 229.
 
 
-LaTeX Warning: Command \cyrshch invalid in math mode on input line 224.
+LaTeX Warning: Command \cyrshch invalid in math mode on input line 229.
 
 
-LaTeX Warning: Command \cyrg invalid in math mode on input line 224.
+LaTeX Warning: Command \cyrg invalid in math mode on input line 229.
 
 Missing character: There is no î in font cmr8!
 Missing character: There is no á in font cmr8!
@@ -856,18 +1275,6 @@ Missing character: There is no ù in font cmr8!
 Missing character: There is no ã in font cmr12!
 [6]
 
-LaTeX Warning: Command \cyro invalid in math mode on input line 231.
-
-
-LaTeX Warning: Command \cyrb invalid in math mode on input line 231.
-
-
-LaTeX Warning: Command \cyrshch invalid in math mode on input line 231.
-
-Missing character: There is no î in font cmr6!
-Missing character: There is no á in font cmr6!
-Missing character: There is no ù in font cmr6!
-
 LaTeX Warning: Command \cyro invalid in math mode on input line 236.
 
 
@@ -876,70 +1283,82 @@ LaTeX Warning: Command \cyrb invalid in math mode on input line 236.
 
 LaTeX Warning: Command \cyrshch invalid in math mode on input line 236.
 
+Missing character: There is no î in font cmr6!
+Missing character: There is no á in font cmr6!
+Missing character: There is no ù in font cmr6!
 
-LaTeX Warning: Command \cyrg invalid in math mode on input line 236.
+LaTeX Warning: Command \cyro invalid in math mode on input line 241.
+
+
+LaTeX Warning: Command \cyrb invalid in math mode on input line 241.
+
+
+LaTeX Warning: Command \cyrshch invalid in math mode on input line 241.
+
+
+LaTeX Warning: Command \cyrg invalid in math mode on input line 241.
 
 Missing character: There is no î in font cmr8!
 Missing character: There is no á in font cmr8!
 Missing character: There is no ù in font cmr8!
 Missing character: There is no ã in font cmr12!
 
-LaTeX Warning: Command \cyro invalid in math mode on input line 236.
+LaTeX Warning: Command \cyro invalid in math mode on input line 241.
 
 
-LaTeX Warning: Command \cyrb invalid in math mode on input line 236.
+LaTeX Warning: Command \cyrb invalid in math mode on input line 241.
 
 
-LaTeX Warning: Command \cyrshch invalid in math mode on input line 236.
+LaTeX Warning: Command \cyrshch invalid in math mode on input line 241.
 
 Missing character: There is no î in font cmr6!
 Missing character: There is no á in font cmr6!
 Missing character: There is no ù in font cmr6!
 
-LaTeX Warning: Command \cyrt invalid in math mode on input line 263.
+LaTeX Warning: Command \cyrt invalid in math mode on input line 268.
 
 
-LaTeX Warning: Command \cyra invalid in math mode on input line 263.
+LaTeX Warning: Command \cyra invalid in math mode on input line 268.
 
 
-LaTeX Warning: Command \cyrb invalid in math mode on input line 263.
+LaTeX Warning: Command \cyrb invalid in math mode on input line 268.
 
 
-LaTeX Warning: Command \cyrl invalid in math mode on input line 263.
+LaTeX Warning: Command \cyrl invalid in math mode on input line 268.
 
 Missing character: There is no ò in font cmr6!
 Missing character: There is no à in font cmr6!
 Missing character: There is no á in font cmr6!
 Missing character: There is no ë in font cmr6!
 
-LaTeX Warning: Command \cyri invalid in math mode on input line 277.
+LaTeX Warning: Command \cyri invalid in math mode on input line 282.
 
 
-LaTeX Warning: Command \cyrz invalid in math mode on input line 277.
+LaTeX Warning: Command \cyrz invalid in math mode on input line 282.
 
 
-LaTeX Warning: Command \cyrm invalid in math mode on input line 277.
+LaTeX Warning: Command \cyrm invalid in math mode on input line 282.
 
 
-LaTeX Warning: Command \cyre invalid in math mode on input line 277.
+LaTeX Warning: Command \cyre invalid in math mode on input line 282.
 
 
-LaTeX Warning: Command \cyrr invalid in math mode on input line 277.
+LaTeX Warning: Command \cyrr invalid in math mode on input line 282.
 
 
-LaTeX Warning: Command \cyre invalid in math mode on input line 277.
+LaTeX Warning: Command \cyre invalid in math mode on input line 282.
 
 
-LaTeX Warning: Command \cyrn invalid in math mode on input line 277.
+LaTeX Warning: Command \cyrn invalid in math mode on input line 282.
 
 
-LaTeX Warning: Command \cyrn invalid in math mode on input line 277.
+LaTeX Warning: Command \cyrn invalid in math mode on input line 282.
 
 
-LaTeX Warning: Command \cyro invalid in math mode on input line 277.
+LaTeX Warning: Command \cyro invalid in math mode on input line 282.
 
 
-LaTeX Warning: Command \cyre invalid in math mode on input line 277.
+LaTeX Warning: Command \cyre invalid in math mode on input line 282.
 
 Missing character: There is no è in font cmr6!
 Missing character: There is no ç in font cmr6!
@@ -952,34 +1371,34 @@ Missing character: There is no í in font cmr6!
 Missing character: There is no î in font cmr6!
 Missing character: There is no å in font cmr6!
 
-LaTeX Warning: Command \cyrr invalid in math mode on input line 277.
+LaTeX Warning: Command \cyrr invalid in math mode on input line 282.
 
 
-LaTeX Warning: Command \cyra invalid in math mode on input line 277.
+LaTeX Warning: Command \cyra invalid in math mode on input line 282.
 
 
-LaTeX Warning: Command \cyrs invalid in math mode on input line 277.
+LaTeX Warning: Command \cyrs invalid in math mode on input line 282.
 
 
-LaTeX Warning: Command \cyrs invalid in math mode on input line 277.
+LaTeX Warning: Command \cyrs invalid in math mode on input line 282.
 
 
-LaTeX Warning: Command \cyrch invalid in math mode on input line 277.
+LaTeX Warning: Command \cyrch invalid in math mode on input line 282.
 
 
-LaTeX Warning: Command \cyryo invalid in math mode on input line 277.
+LaTeX Warning: Command \cyryo invalid in math mode on input line 282.
 
 
-LaTeX Warning: Command \cyrt invalid in math mode on input line 277.
+LaTeX Warning: Command \cyrt invalid in math mode on input line 282.
 
 
-LaTeX Warning: Command \cyrn invalid in math mode on input line 277.
+LaTeX Warning: Command \cyrn invalid in math mode on input line 282.
 
 
-LaTeX Warning: Command \cyro invalid in math mode on input line 277.
+LaTeX Warning: Command \cyro invalid in math mode on input line 282.
 
 
-LaTeX Warning: Command \cyre invalid in math mode on input line 277.
+LaTeX Warning: Command \cyre invalid in math mode on input line 282.
 
 Missing character: There is no ð in font cmr6!
 Missing character: There is no à in font cmr6!
@@ -991,18 +1410,165 @@ Missing character: There is no ò in font cmr6!
 Missing character: There is no í in font cmr6!
 Missing character: There is no î in font cmr6!
 Missing character: There is no å in font cmr6!
-[7] (./3_1_3.aux)
+<5.png, id=49, 586.19pt x 343.2825pt>
+File: 5.png Graphic file (type png)
+<use 5.png>
+Package pdftex.def Info: 5.png  used on input line 293.
+(pdftex.def)             Requested size: 586.18857pt x 343.28165pt.
+
+Overfull \hbox (102.4917pt too wide) in paragraph at lines 293--294
+ [] 
+ []
+
+[7]
+
+LaTeX Warning: Command \cyrk invalid in math mode on input line 300.
+
+
+LaTeX Warning: Command \cyro invalid in math mode on input line 300.
+
+
+LaTeX Warning: Command \cyrl invalid in math mode on input line 300.
+
+
+LaTeX Warning: Command \cyre invalid in math mode on input line 300.
+
+
+LaTeX Warning: Command \cyrb invalid in math mode on input line 300.
+
+Missing character: There is no ê in font cmr8!
+Missing character: There is no î in font cmr8!
+Missing character: There is no ë in font cmr8!
+Missing character: There is no å in font cmr8!
+Missing character: There is no á in font cmr8!
+[8 <./5.png>]
+
+LaTeX Warning: Command \cyrk invalid in math mode on input line 355.
+
+
+LaTeX Warning: Command \cyro invalid in math mode on input line 355.
+
+
+LaTeX Warning: Command \cyrl invalid in math mode on input line 355.
+
+
+LaTeX Warning: Command \cyre invalid in math mode on input line 355.
+
+
+LaTeX Warning: Command \cyrb invalid in math mode on input line 355.
+
+Missing character: There is no ê in font cmr8!
+Missing character: There is no î in font cmr8!
+Missing character: There is no ë in font cmr8!
+Missing character: There is no å in font cmr8!
+Missing character: There is no á in font cmr8!
+[9]
+
+LaTeX Warning: Command \cyrk invalid in math mode on input line 409.
+
+
+LaTeX Warning: Command \cyro invalid in math mode on input line 409.
+
+
+LaTeX Warning: Command \cyrl invalid in math mode on input line 409.
+
+
+LaTeX Warning: Command \cyre invalid in math mode on input line 409.
+
+
+LaTeX Warning: Command \cyrb invalid in math mode on input line 409.
+
+Missing character: There is no ê in font cmr8!
+Missing character: There is no î in font cmr8!
+Missing character: There is no ë in font cmr8!
+Missing character: There is no å in font cmr8!
+Missing character: There is no á in font cmr8!
+[10]
+
+LaTeX Warning: Command \cyrg invalid in math mode on input line 487.
+
+
+LaTeX Warning: Command \cyrr invalid in math mode on input line 487.
+
+Missing character: There is no ã in font cmr8!
+Missing character: There is no ð in font cmr8!
+
+LaTeX Warning: Command \cyrg invalid in math mode on input line 489.
+
+
+LaTeX Warning: Command \cyrr invalid in math mode on input line 489.
+
+
+LaTeX Warning: Command \cyrg invalid in math mode on input line 489.
+
+
+LaTeX Warning: Command \cyrr invalid in math mode on input line 489.
+
+Missing character: There is no ã in font cmr8!
+Missing character: There is no ð in font cmr8!
+Missing character: There is no ã in font cmr8!
+Missing character: There is no ð in font cmr8!
+
+LaTeX Warning: Command \cyrg invalid in math mode on input line 494.
+
+
+LaTeX Warning: Command \cyrr invalid in math mode on input line 494.
+
+Missing character: There is no ã in font cmr8!
+Missing character: There is no ð in font cmr8!
+
+LaTeX Warning: Command \cyrg invalid in math mode on input line 494.
+
+
+LaTeX Warning: Command \cyrr invalid in math mode on input line 494.
+
+Missing character: There is no ã in font cmr8!
+Missing character: There is no ð in font cmr8!
+[11]
+
+LaTeX Warning: Command \cyrp invalid in math mode on input line 570.
+
+
+LaTeX Warning: Command \cyro invalid in math mode on input line 570.
+
+
+LaTeX Warning: Command \cyrl invalid in math mode on input line 570.
+
+
+LaTeX Warning: Command \cyrn invalid in math mode on input line 570.
+
+Missing character: There is no ï in font cmr8!
+Missing character: There is no î in font cmr8!
+Missing character: There is no ë in font cmr8!
+Missing character: There is no í in font cmr8!
+
+LaTeX Warning: Command \cyrp invalid in math mode on input line 576.
+
+
+LaTeX Warning: Command \cyro invalid in math mode on input line 576.
+
+
+LaTeX Warning: Command \cyrl invalid in math mode on input line 576.
+
+
+LaTeX Warning: Command \cyrn invalid in math mode on input line 576.
+
+Missing character: There is no ï in font cmr8!
+Missing character: There is no î in font cmr8!
+Missing character: There is no ë in font cmr8!
+Missing character: There is no í in font cmr8!
+[12] (./3_1_3.aux)
 Package rerunfilecheck Info: File `3_1_3.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 13152 strings out of 479721
- 199645 string characters out of 5887698
- 515215 words of memory out of 5000000
- 30916 multiletter control sequences out of 15000+600000
- 482257 words of font info for 68 fonts, out of 8000000 for 9000
+ 34240 strings out of 479721
+ 793408 string characters out of 5887698
+ 1210543 words of memory out of 5000000
+ 51638 multiletter control sequences out of 15000+600000
+ 484791 words of font info for 74 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
- 60i,9n,63p,825b,389s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 99i,17n,94p,1003b,2464s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/dmitriy/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1200.600
 pk> </home/dmitriy/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1200.60
 0pk> </home/dmitriy/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1440.6
@@ -1016,10 +1582,10 @@ ist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmsy8.pfb>
-Output written on 3_1_3.pdf (7 pages, 213731 bytes).
+Output written on 3_1_3.pdf (12 pages, 254602 bytes).
 PDF statistics:
- 278 PDF objects out of 1000 (max. 8388607)
- 74 compressed objects within 1 object stream
- 8 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 310 PDF objects out of 1000 (max. 8388607)
+ 93 compressed objects within 1 object stream
+ 13 named destinations out of 1000 (max. 500000)
+ 38 words of extra memory for PDF output out of 10000 (max. 10000000)
 
