@@ -318,4 +318,64 @@ x   y       y-max   y-min
 
 \noindent 14) Построим график $\delta\nu$(1/T) и определим его наклон.
 
+\pgfplotstableread{
+x			y 		y-max 	y-min
+5.00		4.995	0.005	0.005
+3.33		3.330	0.003 	0.003
+2.00		2.000	0.002	0.002
+1.25		1.252	0.002	0.002
+0.91		0.910	0.002	0.002
+0.67		0.666	0.002	0.002
+0.50		0.506	0.002	0.002
+0.40		0.400	0.002	0.002
+0.33		0.334	0.002	0.002
+0.29		0.286	0.002	0.002
+0.25		0.250	0.002	0.002
+0.22		0.222	0.002	0.002
+0.20		0.200	0.002	0.002
+}{\mytable}
+
+\begin{tikzpicture}
+\begin{axis} [
+	title = $\delta\nu(1/T)$,
+	xlabel = {1/T, кГц},
+	ylabel = {$\delta\nu$, кГц},
+	minor tick num = 2,
+	grid = major
+]
+
+\addplot +[mark options = {scale = 0.5,}]
+	plot [error bars/.cd, y dir=both, y explicit]
+	table [y error plus=y-max, y error minus=y-min] {\mytable};
+
+\addplot +[mark options = {scale = 0,}]
+	table[row sep=\\,				%аппроксимация
+   y={create col/linear regression={y=Y}}]
+    {
+   		X Y\\  
+		5.00        4.995  \\
+ 3.33        3.330   \\
+ 2.00        2.000   \\
+ 1.25        1.252   \\
+ 0.91        0.910   \\
+ 0.67        0.666   \\
+ 0.50        0.506   \\
+ 0.40        0.400   \\
+ 0.33        0.334   \\
+ 0.29        0.286   \\
+ 0.25        0.250   \\
+ 0.22        0.222   \\
+ 0.20        0.200   \\
+    };
+	\addlegendentry{
+        k$\approx \pgfmathprintnumber{\pgfplotstableregressiona}$} 
+\end{axis}
+\end{tikzpicture}
+
+Таким образом получаем k = $\delta\nu\cdot$T = 1,000 $\pm$ 0,004 $\approx$ 1. Убеждаемся в справедливости соотношение неопределённостей. 
+
+\textbf{В. Исследование спектра гармонических сигналов, модулированных по амплитуде}
+
+
+
 \end{document}
