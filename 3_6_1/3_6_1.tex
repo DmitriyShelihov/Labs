@@ -104,9 +104,218 @@ a) Картинка для сравнения
 
 \noindent 7) Проведём измерения зависимости ширины спектра от длительности импульса $\Delta\nu$($\tau$) при изменении $\tau$ от 25 до 200 мкс при $\nu_{\text{повт}}$ = 1 кГц. Ширину определяем по положению первой гармоники с нулевой амплитудой.
 
+\begin{center}
+\begin{tabular}{|c|c|c|}
+	\hline
+	$\tau$, мкс & $\Delta\nu$, кГц & $\nu_{\text{повт}}$, кГц \\
+	\hline
+	30 & 27,8 $\pm$ 1.4  & \multirow{6}{*}{1}\\
+	\cline{1-2} 45 & 19,9 $\pm$ 1.0 & \\
+	\cline{1-2} 67,5 & 13,8 $\pm$ 0.7 & \\
+	\cline{1-2} 100 & 10.0 $\pm$ 0.5 & \\
+	\cline{1-2} 140 & 6,0 $\pm$ 0.3 & \\
+	\cline{1-2} 200 & 5,0 $\pm$ 0.1 & \\
+	\hline
+\end{tabular}
+\end{center}
+
+\noindent 8) Построим график зависимости ширины спектра от обратного времени импульса $\Delta\nu(1/\tau)$.
+
+\pgfplotstableread{
+x			y 		y-max 	y-min
+5			5.0		0.1		0.1
+7.14286		6.0		0.3		0.3
+10			10.0	0.5		0.5
+14.81481	13.8	0.7		0.7
+22.22222	19.9	1.0		1.0
+33.33333	27.8	1.4		1.4
+}{\mytable}
+
+\begin{tikzpicture}
+\begin{axis} [
+	title = $\Delta\nu(1/\tau)$,
+	xlabel = {1/$\tau$, кГц},
+	ylabel = {$\Delta\nu$, кГц},
+	minor tick num = 2,
+	grid = major
+]
+
+\addplot +[mark options = {scale = 0.1,}]
+	plot [error bars/.cd, y dir=both, y explicit]
+	table [y error plus=y-max, y error minus=y-min] {\mytable};
+
+\addplot +[mark options = {scale = 0,}]
+	table[row sep=\\,				%аппроксимация
+   y={create col/linear regression={y=Y}}]
+    {
+   		X Y\\  
+		33.33333  27.8 \\    
+		22.22222  19.9\\   
+		14.81481  13.8\\   
+		10   10.0\\  
+		7.14286   6.0\\    
+		5   5.0\\     
+    };
+	\addlegendentry{
+        k$\approx \pgfmathprintnumber{\pgfplotstableregressiona}$} 
+\end{axis}
+\end{tikzpicture}
+
+Получили k $\approx$ 0.82 $\pm$ 0.05. По соотношению неопределённостей $k\approx\Delta\nu\cdot\tau\approx1$. Таким образом соотношение соблюдается, поскольку получена величина по порядку совпадающая с единицей.
+
+\noindent 9) Для сигнала из первого изображения ($\nu_{\text{повт}}$ = 1кГц, $\tau$ = 50мкс) рассчитаем теоретические значения амплитуд спектральных компонент по формуле:
+
+$$ {|c_n|}^{теор} = \frac{|sin\frac{\pi n\tau}{T}|}{\pi n} $$
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+	\hline
+	n гармоники & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\
+	\hline
+	$\nu_n^{\text{эксп}}$, кГц & 1,014 & 2,031 & 3,007 & 4,024 & 5,041 & 6,017 & 6,994 & 8,011 \\
+	\hline
+	$\nu_n^{\text{теор}}$, кГц & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\
+	\hline
+	$|c_n^{\text{эксп}}|$, мВ & 279,1 $\pm$ 0,1 & 275,8 $\pm$ 0,1 & 270,9 $\pm$ 0,1 & 262,7 $\pm$ 0,1 & 252,9 $\pm$ 0,1 & 241,4 $\pm$ 0,1 & 226,7 $\pm$ 0,1 & 212,0 $\pm$ 0,1 \\
+	\hline
+	${|c_n/c_1|}^{\text{эксп}}$ & 1 & 0,988 $\pm$ 0,001 & 0,967 $\pm$ 0,001 & 0,939 $\pm$ 0,001 & 0,904 $\pm$ 0,001 & 0,862 $\pm$ 0,001 & 0,814 $\pm$ 0,001 & 0,760 $\pm$ 0,001 \\
+	\hline
+	${|{c_n/c_1}|}^{\text{теор}}$ & 1 & 0,988 & 0,971 & 0,941 & 0,906 & 0,865 & 0,812 & 0,760 \\
+	\hline
+\end{tabular}
+\end{center}
+
+Сравним измеренные значения с теоретическими, изобразив их на одном графике.
+
+\pgfplotstableread{
+x	y 		y-max 	y-min
+1	1	0.0	0.0
+2	0.988	0.001	0.001
+3	0.967 0.001 	0.001
+4	0.939	0.001 	0.001
+5	0.904	0.001 	0.001
+6	0.862	0.001	0.001
+7	0.814	0.001	0.001
+8	0.760	0.001	0.001
+}{\mytable}
+
+\begin{tikzpicture}
+\begin{axis} [
+	title = $|c_n/c_1|$(n),
+	xlabel = {n},
+	ylabel = {$|c_n/c_1|$},
+	minor tick num = 2,
+	grid = major
+]
+
+\addplot +[mark options = {scale = 0.1,}]
+	plot [error bars/.cd, y dir=both, y explicit]
+	table [y error plus=y-max, y error minus=y-min] {\mytable};
+
+\pgfplotstableread{
+x   y       y-max   y-min
+ 1   1   0.0 0.0
+ 2   0.988   0.0   0.0
+ 3   0.971 0.0     0.0
+ 4   0.941   0.0   0.0
+ 5   0.906   0.0   0.0
+6   0.865   0.0   0.0
+7   0.812   0.0   0.0
+8   0.760   0.0   0.0
+}{\mytable}
+
+\addplot +[mark options = {scale = 0.1,}]
+     plot [error bars/.cd, y dir=both, y explicit]
+     table [y error plus=y-max, y error minus=y-min] {\mytable};
 
 
+\end{axis}
+\end{tikzpicture}
+
+\textbf{Б. Исследование спектра периодической последовательности цугов гармонических колебаний}
+
+Исследуем зависимость расстояния между ближайшими спектральными компонентами от частоты повторения цугов.
+
+\noindent 10) По техническому описанию к работе соберем схему, используемую для генерации последовательности синусоидальных цугов.
+
+\noindent 11) Установим несущую частоту $\nu_0$ = 25кГц и получим на экране осциллографа устойчивую картину цугов.
+
+\noindent 12) Получим спектр сигнала. Пронаблюдаем, как изменяется вид спектра:
+
+Число N отвечает за число волн спектра, которое равно 2N-1.
+
+ \begin{figure}
+ \center{\includegraphics[width=.4\textwidth]{8.png}}
+ \caption{$\nu_0$ = 50кГц, T = 1мс, N = 5}
+ a) Картинка для сравнения
+ \end{figure}
 
 
+ 
+ \begin{figure}
+ \center{\includegraphics[width=.4\textwidth]{9.png}}
+ \caption{$\nu_0$ = 70кГц, T = 1мс, N = 5}
+ б) При увеличении $\nu_0$ амплитуды гармоник уменьшаются, ширина спектра увеличивается.
+ \end{figure}
+ 
+
+
+ \begin{figure}
+ \center{\includegraphics[width=.4\textwidth]{10.png}}
+ \caption{$\nu_0$ = 50кГц, T = 2мс, N = 5}
+ в) При увеличении T амплитуды уменьшаются, ширина спектра не меняется.
+ \end{figure}
+
+
+ 
+ \begin{figure}
+ \center{\includegraphics[width=.4\textwidth]{11.png}}
+ \caption{$\nu_0$ = 50кГц, T = 1мс, N = 6}
+ г) При увеличении N амплитуда растёт, ширина спектра уменьшается.
+ \end{figure}
+ 
+
+
+ Масштаб частот по оси X на всех изображениях один и тот же.
+
+\center{\includegraphics[width=.6\textwidth]{12.png}}
+
+\noindent 13) При фиксированной длительности импульсов $\tau$ = 100 мкс исследуем зависимость расстояния $\delta\nu$ между соседними спектральными компонентами периода повторения импульсов T = 1/$nu_{\text{повт}}$ (в диапазоне частот 1-8 кГц)
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	T, мкс & $\delta\nu_m$, кГц & $\delta\nu$, кГц & $\nu_{\text{повт}}$, кГц & m, шт \\
+	\hline
+	200 & 19,98 $\pm$ 0,02 & 4,995 $\pm$ 0,005 & 5,00 & 4 \\
+	\hline
+	300 & 19,98 $\pm$ 0,02 & 3,330 $\pm$ 0,003  & 3,33 & 6 \\
+	\hline
+	500 & 20,00 $\pm$ 0,02 & 2,000 $\pm$ 0,002 & 2,00 & 10 \\
+	\hline
+	800 & 12,52 $\pm$ 0,02 & 1,252 $\pm$ 0,002  & 1,25 & 10 \\
+	\hline
+	1100 & 9,10 $\pm$ 0,02 & 0,910 $\pm$ 0,002  & 0,91 & 10 \\
+	\hline
+	1500 & 6,66 $\pm$ 0,02  & 0,666 $\pm$ 0,002   & 0,67 & 10 \\
+	\hline
+	2000 & 5,06 $\pm$ 0,02  & 0,506 $\pm$ 0,002  & 0,50 & 10 \\
+	\hline
+	2500 & 4,00 $\pm$ 0,02  & 0,400 $\pm$ 0,002   & 0,40 & 10 \\
+	\hline
+	3000 & 3,34 $\pm$ 0,02  & 0,334 $\pm$ 0,002  & 0,33 & 10 \\
+	\hline
+	3500 & 2,86 $\pm$ 0,02  & 0,286 $\pm$ 0,002  & 0,29 & 10 \\
+	\hline
+	4000 & 2,50 $\pm$ 0,02  & 0,250 $\pm$ 0,002  & 0,25 & 10 \\
+	\hline
+	4500 & 2,22 $\pm$ 0,02  & 0,222 $\pm$ 0,002  & 0,22 & 10 \\
+	\hline
+	5000 & 2,00 $\pm$ 0,02  & 0,200 $\pm$ 0,002  & 0,20 & 10 \\
+	\hline
+\end{tabular}
+\end{center}
+
+\noindent 14) Построим график $\delta\nu$(1/T) и определим его наклон.
 
 \end{document}
