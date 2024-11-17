@@ -290,4 +290,372 @@ x			y			y-min		y-max		x-min		x-max
 
 \par 7) Построим зондовую характеристику, предварительно отцентрировав кривую    ($I_0$ = $\Sigma I/2$). Найдем ток насыщения $I_{i\text{н}}$ из пересечения асимптоты к верхней и нижней части графика с осью U = 0, а также величину $\frac{dI}{dU}$ при U = 0.
 
+\pgfplotstableread{
+x			y			y-min		y-max		x-min		x-max
+-22.25		-113.4		0.1		0.1		0.05		0.05
+-18.95		-108.5		0.1		0.1		0.05		0.05
+-16.02		-101.1		0.1		0.1		0.05		0.05
+-13.15		-91.2		0.1		0.1		0.05		0.05
+-10.58		-79.8		0.1		0.1		0.05		0.05
+-7.99		-66.6		0.1		0.1		0.05		0.05
+-6			-54.5 		0.1		0.1		0.05		0.05
+-4.03		-41.8		0.1		0.1		0.05		0.05
+-2.11		-27.2		0.1		0.1		0.05		0.05
+-0.55		-15			0.1		0.1		0.05		0.05
+0.51		17.6		0.1		0.1		0.05		0.05
+2.11		27.8		0.1		0.1		0.05		0.05
+4.17		40.9		0.1		0.1		0.05		0.05
+5.92		50.6		0.1		0.1		0.05		0.05
+7.93		60.7		0.1		0.1		0.05		0.05
+10.05		70.7		0.1		0.1		0.05		0.05
+12.05		77.5		0.1		0.1		0.05		0.05	
+15.07		86.4		0.1		0.1		0.05		0.05
+18.31		92.7		0.1		0.1		0.05		0.05
+21			96			0.1		0.1		0.05		0.05
+}{\mytable}
+
+\resizebox{\columnwidth}{!}{
+\begin{tikzpicture}
+\begin{axis} [
+	title = $I_{\text{з}}(U_{\text{з}})$,
+	xlabel = {$U_{\text{з}}$, В},
+	ylabel = {$I_{\text{з}}$, мкА},
+	minor tick num = 2,
+	grid = major
+]
+
+\addplot +[mark options = {scale = 0.1,}]
+	plot [error bars/.cd, y dir=both, x dir=both, y explicit, x explicit]
+	table [y error plus=y-max, y error minus=y-min, x error plus=x-max, x error minus=x-min] {\mytable};
+
+\addplot +[mark options = {scale = 0,}]
+	table[row sep=\\,				%аппроксимация
+   y={create col/linear regression={y=Y}}]
+    {
+   		X Y\\
+		-2.11       -27.2\\
+		-0.55       -15\\
+		0.51        17.6\\
+		2.11        27.8\\
+    };
+\addplot +[mark options = {scale = 0,}]
+    table[row sep=\\,               %аппроксимация
+   y={create col/linear regression={y=Y}}]
+    {
+        X Y\\
+       	-22.25	-113.4\\
+        -18.95	-108.5\\
+        -16.02	-101.1\\
+    };
+\addplot +[mark options = {scale = 0,}]
+    table[row sep=\\,               %аппроксимация
+    y={create col/linear regression={y=Y}}]
+     {
+         X Y\\
+         15.07       86.4\\
+		 18.31       92.7\\
+		 21          96\\  
+     };
+\end{axis}
+\end{tikzpicture}
+}
+\par Откуда:\\
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+	\hline
+	$\frac{dI}{dU}$, мкА/В & $I_{i\text{н}}^{\text{асимптота снизу}}$, мкА & $I_{i\text{н}}^{\text{асимптота сверху}}$, мкА & $I_p$, мА \\
+	\hline
+	14.08 $\pm$ 0.61 & -70.2 $\pm$ 2.8  & 62.2 $\pm$ 2.6 & 4.73 $\pm$ 0.01 \\
+	\hline
+\end{tabular}
+\end{center}
+
+Усредним полученное значение для $I_{i\text{н}}$: (66.2 $\pm$ 2.7) мкА. \\
+
+Определим $\Delta U$ между точками 1 и 2: \begin{tabular}{|c|} \hline $\Delta U = 4.42 \pm 0.38$ В.\\ \hline \end{tabular}
+
+\par8) Аналогичные измерения проделаем для токов разряда $I_p$ = (2.99 $\pm$ 0.01) мА и $I_p$ = (1.49 $\pm$ 0.01) мА.\\
+
+\begin{tabular}{|c|c|c|}
+	\hline
+	$U_{\text{з}}$, В & $I_{\text{з}}$, мкА &  $I_p$, мА \\
+	\hline
+	-24.99 $\pm$ 0.05 & -59.1 $\pm$ 0.1 & \multirow{22}{*}{2.99 $\pm$ 0.01}\\
+	\cline{1-2}
+	-22.31 $\pm$ 0.05 & -57.7 $\pm$ 0.1 & \\
+	\cline{1-2}
+	-19.16 $\pm$ 0.05 & -55.8 $\pm$ 0.1 & \\
+	\cline{1-2}
+	-15.75 $\pm$ 0.05 & -52.9 $\pm$ 0.1 & \\
+	\cline{1-2}
+	-12.16 $\pm$ 0.05 & -47.4 $\pm$ 0.1 & \\
+	\cline{1-2}
+	-10.09 $\pm$ 0.05 & -43.1 $\pm$ 0.1 & \\
+	\cline{1-2}
+	-8.19 $\pm$ 0.05 & -37.8 $\pm$ 0.1 & \\
+	\cline{1-2}
+	-6.09 $\pm$ 0.05 & -30.5 $\pm$ 0.1 & \\
+	\cline{1-2}
+	-4.06 $\pm$ 0.05 & -22.1 $\pm$ 0.1 & \\
+	\cline{1-2}
+	-2.08 $\pm$ 0.05 & -13.3 $\pm$ 0.1 & \\
+	\cline{1-2}
+	-0.53 $\pm$ 0.05 & -4.7 $\pm$ 0.1 & \\
+	\cline{1-2}
+	0.66 $\pm$ 0.05 & 7.3 $\pm$ 0.1 & \\
+	\cline{1-2}
+	2.11 $\pm$ 0.05 & 14.7 $\pm$ 0.1 & \\
+	\cline{1-2}
+	4.30 $\pm$ 0.05 & 24.6 $\pm$ 0.1 & \\
+	\cline{1-2}
+	6.01 $\pm$ 0.05 & 31.1 $\pm$ 0.1 & \\
+	\cline{1-2}
+	8.11 $\pm$ 0.05 & 37.8 $\pm$ 0.1 & \\
+	\cline{1-2}
+	10.32 $\pm$ 0.05 & 43.0 $\pm$ 0.1 & \\
+	\cline{1-2}
+	13.25 $\pm$ 0.05 & 48.1 $\pm$ 0.1 & \\
+	\cline{1-2}
+	16.67 $\pm$ 0.05 & 51.7 $\pm$ 0.1 & \\
+	\cline{1-2}
+	19.34 $\pm$ 0.05 & 53.5 $\pm$ 0.1 & \\
+	\cline{1-2}
+	22.58 $\pm$ 0.05 & 55.3 $\pm$ 0.1 & \\
+	\cline{1-2}
+	24.98 $\pm$ 0.05 & 56.5 $\pm$ 0.1 & \\
+	\hline
+\end{tabular}
+
+\pgfplotstableread{
+x			y			y-min		y-max		x-min		x-max
+-24.99		-59.1		0.1		0.1		0.05		0.05
+-22.31		-57.7		0.1		0.1		0.05		0.05
+-19.16		-55.8		0.1		0.1		0.05		0.05
+-15.75		-52.9		0.1		0.1		0.05		0.05
+-12.16		-47.4		0.1		0.1		0.05		0.05
+-10.09		-43.1		0.1		0.1		0.05		0.05
+-8.19		-37.8 		0.1		0.1		0.05		0.05
+-6.09		-30.5		0.1		0.1		0.05		0.05
+-4.06		-22.1		0.1		0.1		0.05		0.05
+-2.08		-13.3		0.1		0.1		0.05		0.05
+-0.53		-4.7		0.1		0.1		0.05		0.05
+0.66		7.3			0.1		0.1		0.05		0.05
+2.11		14.7		0.1		0.1		0.05		0.05
+4.30		24.6		0.1		0.1		0.05		0.05
+6.01		31.1		0.1		0.1		0.05		0.05
+8.11		37.8		0.1		0.1		0.05		0.05
+10.32		43.0		0.1		0.1		0.05		0.05
+13.25		48.1		0.1		0.1		0.05		0.05
+16.67		51.7		0.1		0.1		0.05		0.05
+19.34		53.5		0.1		0.1		0.05		0.05
+22.58		55.3		0.1		0.1		0.05		0.05
+24.98		56.5		0.1		0.1		0.05		0.05
+}{\mytable}
+
+\resizebox{\columnwidth}{!}{
+\begin{tikzpicture}
+\begin{axis} [
+	title = $I_{\text{з}}(U_{\text{з}})$,
+	xlabel = {$U_{\text{з}}$, В},
+	ylabel = {$I_{\text{з}}$, мкА},
+	minor tick num = 2,
+	grid = major
+]
+
+\addplot +[mark options = {scale = 0.1,}]
+	plot [error bars/.cd, y dir=both, x dir=both, y explicit, x explicit]
+	table [y error plus=y-max, y error minus=y-min, x error plus=x-max, x error minus=x-min] {\mytable};
+
+\addplot +[mark options = {scale = 0,}]
+	table[row sep=\\,				%аппроксимация
+   y={create col/linear regression={y=Y}}]
+    {
+   		X Y\\
+    	-2.08       -13.3\\
+		-0.53       -4.7\\
+		0.66        7.3\\
+		2.11        14.7\\
+    };
+\addplot +[mark options = {scale = 0,}]
+    table[row sep=\\,               %аппроксимация
+   y={create col/linear regression={y=Y}}]
+    {
+        X Y\\
+      	-24.99      -59.1\\
+      	-22.31      -57.7\\
+		-19.16      -55.8\\
+    };
+\addplot +[mark options = {scale = 0,}]
+    table[row sep=\\,               %аппроксимация
+    y={create col/linear regression={y=Y}}]
+     {
+         X Y\\
+         19.34       53.5\\
+		 22.58       55.3\\
+		 24.98       56.5\\
+     };
+\end{axis}
+\end{tikzpicture}
+}
+\par Откуда:\\
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+	\hline
+	$\frac{dI}{dU}$, мкА/В & $I_{i\text{н}}^{\text{асимптота снизу}}$, мкА & $I_{i\text{н}}^{\text{асимптота сверху}}$, мкА & $I_p$, мА \\
+	\hline
+	6.94 $\pm$ 0.30 & -45.0 $\pm$ 1.8  & 43.2 $\pm$ 1.8 & 2.99 $\pm$ 0.01 \\
+	\hline
+\end{tabular}
+\end{center}
+
+Усредним полученное значение для $I_{i\text{н}}$: (44.1 $\pm$ 1.8) мкА. \\
+
+Определим $\Delta U$ между точками 1 и 2: \begin{tabular}{|c|} \hline $\Delta U = 4.42 \pm 0.38$ В.\\ \hline \end{tabular}
+
+\begin{tabular}{|c|c|c|}
+	\hline
+	$U_{\text{з}}$, В & $I_{\text{з}}$, мкА &  $I_p$, мА \\
+	\hline
+	-25.00 $\pm$ 0.05 & -27.2 $\pm$ 0.1 & \multirow{22}{*}{1.49 $\pm$ 0.01}\\
+	\cline{1-2} 
+	-22.06 $\pm$ 0.05 & -26.2 $\pm$ 0.1 & \\
+	\cline{1-2}
+	-19.17 $\pm$ 0.05 & -25.3 $\pm$ 0.1 & \\
+	\cline{1-2}
+	-16.26 $\pm$ 0.05 & -24.4 $\pm$ 0.1 & \\
+	\cline{1-2}
+	-13.14 $\pm$ 0.05 & -23.1 $\pm$ 0.1 & \\
+	\cline{1-2}
+	-10.86 $\pm$ 0.05 & -21.5 $\pm$ 0.1 & \\
+	\cline{1-2}
+	-8.14 $\pm$ 0.05 & -18.5 $\pm$ 0.1 & \\
+	\cline{1-2}
+	-6.31 $\pm$ 0.05 & -15.6 $\pm$ 0.1 & \\
+	\cline{1-2}
+	-4.14 $\pm$ 0.05 & -11.1 $\pm$ 0.1 & \\
+	\cline{1-2}
+	-1.87 $\pm$ 0.05 & -5.2 $\pm$ 0.1 & \\
+	\cline{1-2}
+	-0.55 $\pm$ 0.05 & -1.6 $\pm$ 0.1 & \\
+	\cline{1-2}
+	0.49 $\pm$ 0.05 & 2.0 $\pm$ 0.1 & \\
+	\cline{1-2}
+	1.95 $\pm$ 0.05 & 5.8 $\pm$ 0.1 & \\
+	\cline{1-2}
+	4.18 $\pm$ 0.05 & 11.1 $\pm$ 0.1 & \\
+	\cline{1-2}
+	6.18 $\pm$ 0.05 & 15.0 $\pm$ 0.1 & \\
+	\cline{1-2}
+	8.15 $\pm$ 0.05 & 17.8 $\pm$ 0.1 & \\
+	\cline{1-2}
+	10.41 $\pm$ 0.05 & 20.0 $\pm$ 0.1 & \\
+	\cline{1-2}
+	12.88 $\pm$ 0.05 & 21.6 $\pm$ 0.1 & \\
+	\cline{1-2}
+	16.46 $\pm$ 0.05 & 22.9 $\pm$ 0.1 & \\
+	\cline{1-2}
+	19.40 $\pm$ 0.05 & 23.8 $\pm$ 0.1 & \\
+	\cline{1-2}
+	22.38 $\pm$ 0.05 & 24.7 $\pm$ 0.1 & \\
+	\cline{1-2}
+	24.97 $\pm$ 0.05 & 25.4 $\pm$ 0.1 & \\
+	\hline
+\end{tabular}
+
+\pgfplotstableread{
+x			y			y-min		y-max		x-min		x-max
+-25.00		-27.18		0.1		0.1		0.05		0.05
+-22.058		-26.24		0.1		0.1		0.05		0.05
+-19.170		-25.34		0.1		0.1		0.05		0.05
+-16.26		-24.37		0.1		0.1		0.05		0.05
+-13.14		-23.06		0.1		0.1		0.05		0.05
+-10.858		-21.50		0.1		0.1		0.05		0.05
+-8.14		-18.52 		0.1		0.1		0.05		0.05
+-6.312		-15.58		0.1		0.1		0.05		0.05
+-4.14		-11.06		0.1		0.1		0.05		0.05
+-1.87		-5.23		0.1		0.1		0.05		0.05
+-0.5468		-1.56		0.1		0.1		0.05		0.05
+0.4928		2.02		0.1		0.1		0.05		0.05
+1.9486		5.81		0.1		0.1		0.05		0.05
+4.1755		11.13		0.1		0.1		0.05		0.05
+6.182		14.96		0.1		0.1		0.05		0.05
+8.146		17.78		0.1		0.1		0.05		0.05
+10.408		20			0.1		0.1		0.05		0.05	
+12.88		21.56		0.1		0.1		0.05		0.05
+16.455		22.93		0.1		0.1		0.05		0.05
+19.403		23.81		0.1		0.1		0.05		0.05
+22.379		24.66		0.1		0.1		0.05		0.05	
+24.970		25.42		0.1		0.1		0.05		0.05
+}{\mytable}
+
+\resizebox{\columnwidth}{!}{
+\begin{tikzpicture}
+\begin{axis} [
+	title = $I_{\text{з}}(U_{\text{з}})$,
+	xlabel = {$U_{\text{з}}$, В},
+	ylabel = {$I_{\text{з}}$, мкА},
+	minor tick num = 2,
+	grid = major
+]
+
+\addplot +[mark options = {scale = 0.1,}]
+	plot [error bars/.cd, y dir=both, x dir=both, y explicit, x explicit]
+	table [y error plus=y-max, y error minus=y-min, x error plus=x-max, x error minus=x-min] {\mytable};
+
+\addplot +[mark options = {scale = 0,}]
+	table[row sep=\\,				%аппроксимация
+   y={create col/linear regression={y=Y}}]
+    {
+   		X Y\\
+		 -1.87      -5.23\\
+		-0.5468     -1.56\\
+		0.4928      2.02\\
+		1.9486      5.81\\
+    };
+\addplot +[mark options = {scale = 0,}]
+    table[row sep=\\,               %аппроксимация
+   y={create col/linear regression={y=Y}}]
+    {
+        X Y\\
+    	-25.00      -27.18\\
+		-22.058     -26.24\\
+		-19.170     -25.34\\
+    };
+\addplot +[mark options = {scale = 0,}]
+    table[row sep=\\,               %аппроксимация
+    y={create col/linear regression={y=Y}}]
+     {
+         X Y\\
+        19.403      23.81\\
+		22.379      24.66\\
+		24.970      25.42\\
+     };
+\end{axis}
+\end{tikzpicture}
+}
+\par Откуда:\\
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+	\hline
+	$\frac{dI}{dU}$, мкА/В & $I_{i\text{н}}^{\text{асимптота снизу}}$, мкА & $I_{i\text{н}}^{\text{асимптота сверху}}$, мкА & $I_p$, мА \\
+	\hline
+	14.08 $\pm$ 0.61 & -70.2 $\pm$ 2.8  & 62.2 $\pm$ 2.6 & 4.73 $\pm$ 0.01 \\
+	\hline
+\end{tabular}
+\end{center}
+
+Усредним полученное значение для $I_{i\text{н}}$: (66.2 $\pm$ 2.7) мкА. \\
+
+Определим $\Delta U$ между точками 1 и 2: \begin{tabular}{|c|} \hline $\Delta U = 4.42 \pm 0.38$ В.\\ \hline \end{tabular}
+
+
+\par9) Занесем данные, необходимые для рассчёта $T_e$, $n_e$, $r_D$, $r_{De}$, ${\omega}_p$, $N_D$, $\alpha$ в таблицу:\\
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+	\hline
+\end{tabular}
+\end{center}
+
+
 \end{document}
