@@ -510,7 +510,7 @@ x			y			y-min		y-max		x-min		x-max
 
 Усредним полученное значение для $I_{i\text{н}}$: (44.1 $\pm$ 1.8) мкА. \\
 
-Определим $\Delta U$ между точками 1 и 2: \begin{tabular}{|c|} \hline $\Delta U = 4.42 \pm 0.38$ В.\\ \hline \end{tabular}
+Определим $\Delta U$ между точками 1 и 2: \begin{tabular}{|c|} \hline $\Delta U = 6.90 \pm 0.59 $ В.\\ \hline \end{tabular}
 
 \begin{tabular}{|c|c|c|}
 	\hline
@@ -639,23 +639,328 @@ x			y			y-min		y-max		x-min		x-max
 	\hline
 	$\frac{dI}{dU}$, мкА/В & $I_{i\text{н}}^{\text{асимптота снизу}}$, мкА & $I_{i\text{н}}^{\text{асимптота сверху}}$, мкА & $I_p$, мА \\
 	\hline
-	14.08 $\pm$ 0.61 & -70.2 $\pm$ 2.8  & 62.2 $\pm$ 2.6 & 4.73 $\pm$ 0.01 \\
+	2.93 $\pm$ 0.13 & -19.3 $\pm$ 0.8 & 18.2 $\pm$ 0.8 & 1.49 $\pm$ 0.01\\
 	\hline
 \end{tabular}
 \end{center}
 
-Усредним полученное значение для $I_{i\text{н}}$: (66.2 $\pm$ 2.7) мкА. \\
+Усредним полученное значение для $I_{i\text{н}}$: (18.8 $\pm$ 0.8) мкА. \\
 
-Определим $\Delta U$ между точками 1 и 2: \begin{tabular}{|c|} \hline $\Delta U = 4.42 \pm 0.38$ В.\\ \hline \end{tabular}
-
+Определим $\Delta U$ между точками 1 и 2: \begin{tabular}{|c|} \hline $\Delta U = 7.59 \pm 0.65$ В\\ \hline \end{tabular}
 
 \par9) Занесем данные, необходимые для рассчёта $T_e$, $n_e$, $r_D$, $r_{De}$, ${\omega}_p$, $N_D$, $\alpha$ в таблицу:\\
 
 \begin{center}
-\begin{tabular}{|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|c|}
+	\hline
+	$I_p$, мА & $\left.\frac{dI}{dU}\right|_{U=0}$, мкА/В & $I_{i\text{н}}$, мкА & $\Delta U$, В & d, мм & l, мм\\
+	\hline
+	4.73 $\pm$ 0.01 & 14.08 $\pm$ 0.61 & 66.2 $\pm$ 2.7 & 4.42 $\pm$ 0.38  & \multirow{3}{*}{0,2} & \multirow{3}{*}{5,2}\\
+	\cline{1-4}
+	2.99 $\pm$ 0.01 & 6.94 $\pm$ 0.30 & 44.1 $\pm$ 1.8 & 6.90 $\pm$ 0.59 & & \\
+	\cline{1-4}
+	1.49 $\pm$ 0.01 & 2.93 $\pm$ 0.13 & 18.8 $\pm$ 0.8 & 7.59 $\pm$ 0.65 & & \\
 	\hline
 \end{tabular}
 \end{center}
 
+\par10) Рассчитаем температуру электронов $T_e$ по формулам: 
+
+$$T_e = \frac{1}{2k}\frac{eI_{i\text{н}}}{\left.\frac{dI}{dU}\right|_{U=0}} (1)$$
+
+$$kT_e = \Delta U/2 \text{эВ} (2)$$
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+	\hline
+	$I_p$, мА & ${T_e}^{(1)}$, $10^4$К & ${T_e}^{(2)}$, $10^4$К & ${T_e}^{\text{ср}}$, $10^4$К \\ 
+	\hline
+	4.73 $\pm$ 0.01 & 2.7 $\pm$ 0.2 & 2.6 $\pm$ 0.2 & 2.7 $\pm$ 0.2\\ 
+	\hline
+	2.99 $\pm$ 0.01 & 3.7 $\pm$ 0.3 & 4.0 $\pm$ 0.3 & 3.9 $\pm$ 0.3\\
+	\hline
+	1.49 $\pm$ 0.01 & 3.7 $\pm$ 0.3 & 4.4 $\pm$ 0.4 & 4.1 $\pm$ 0.4\\
+	\hline
+\end{tabular}
+\end{center}
+
+\par11) Построим семейство зондовых характеристик $I_{\text{з}}(U_{\text{з}})$ на одном листе:\\
+
+\pgfplotstableread{
+x			y			y-min		y-max		x-min		x-max
+-22.25		-113.4		0.1		0.1		0.05		0.05
+-18.95		-108.5		0.1		0.1		0.05		0.05
+-16.02		-101.1		0.1		0.1		0.05		0.05
+-13.15		-91.2		0.1		0.1		0.05		0.05
+-10.58		-79.8		0.1		0.1		0.05		0.05
+-7.99		-66.6		0.1		0.1		0.05		0.05
+-6			-54.5 		0.1		0.1		0.05		0.05
+-4.03		-41.8		0.1		0.1		0.05		0.05
+-2.11		-27.2		0.1		0.1		0.05		0.05
+-0.55		-15			0.1		0.1		0.05		0.05
+0.51		17.6		0.1		0.1		0.05		0.05
+2.11		27.8		0.1		0.1		0.05		0.05
+4.17		40.9		0.1		0.1		0.05		0.05
+5.92		50.6		0.1		0.1		0.05		0.05
+7.93		60.7		0.1		0.1		0.05		0.05
+10.05		70.7		0.1		0.1		0.05		0.05
+12.05		77.5		0.1		0.1		0.05		0.05	
+15.07		86.4		0.1		0.1		0.05		0.05
+18.31		92.7		0.1		0.1		0.05		0.05
+21			96			0.1		0.1		0.05		0.05
+}{\mytablea}
+
+\pgfplotstableread{
+x			y			y-min		y-max		x-min		x-max
+-24.99		-59.1		0.1		0.1		0.05		0.05
+-22.31		-57.7		0.1		0.1		0.05		0.05
+-19.16		-55.8		0.1		0.1		0.05		0.05
+-15.75		-52.9		0.1		0.1		0.05		0.05
+-12.16		-47.4		0.1		0.1		0.05		0.05
+-10.09		-43.1		0.1		0.1		0.05		0.05
+-8.19		-37.8 		0.1		0.1		0.05		0.05
+-6.09		-30.5		0.1		0.1		0.05		0.05
+-4.06		-22.1		0.1		0.1		0.05		0.05
+-2.08		-13.3		0.1		0.1		0.05		0.05
+-0.53		-4.7		0.1		0.1		0.05		0.05
+0.66		7.3			0.1		0.1		0.05		0.05
+2.11		14.7		0.1		0.1		0.05		0.05
+4.30		24.6		0.1		0.1		0.05		0.05
+6.01		31.1		0.1		0.1		0.05		0.05
+8.11		37.8		0.1		0.1		0.05		0.05
+10.32		43.0		0.1		0.1		0.05		0.05
+13.25		48.1		0.1		0.1		0.05		0.05
+16.67		51.7		0.1		0.1		0.05		0.05
+19.34		53.5		0.1		0.1		0.05		0.05
+22.58		55.3		0.1		0.1		0.05		0.05
+24.98		56.5		0.1		0.1		0.05		0.05
+}{\mytableb}
+
+\pgfplotstableread{
+x			y			y-min		y-max		x-min		x-max
+-25.00		-27.18		0.1		0.1		0.05		0.05
+-22.058		-26.24		0.1		0.1		0.05		0.05
+-19.170		-25.34		0.1		0.1		0.05		0.05
+-16.26		-24.37		0.1		0.1		0.05		0.05
+-13.14		-23.06		0.1		0.1		0.05		0.05
+-10.858		-21.50		0.1		0.1		0.05		0.05
+-8.14		-18.52 		0.1		0.1		0.05		0.05
+-6.312		-15.58		0.1		0.1		0.05		0.05
+-4.14		-11.06		0.1		0.1		0.05		0.05
+-1.87		-5.23		0.1		0.1		0.05		0.05
+-0.5468		-1.56		0.1		0.1		0.05		0.05
+0.4928		2.02		0.1		0.1		0.05		0.05
+1.9486		5.81		0.1		0.1		0.05		0.05
+4.1755		11.13		0.1		0.1		0.05		0.05
+6.182		14.96		0.1		0.1		0.05		0.05
+8.146		17.78		0.1		0.1		0.05		0.05
+10.408		20			0.1		0.1		0.05		0.05	
+12.88		21.56		0.1		0.1		0.05		0.05
+16.455		22.93		0.1		0.1		0.05		0.05
+19.403		23.81		0.1		0.1		0.05		0.05
+22.379		24.66		0.1		0.1		0.05		0.05	
+24.970		25.42		0.1		0.1		0.05		0.05
+}{\mytablec}
+
+\resizebox{\columnwidth}{!}{
+\begin{tikzpicture}
+\begin{axis} [
+	title = $I_{\text{з}}(U_{\text{з}})$,
+	xlabel = {$U_{\text{з}}$, В},
+	ylabel = {$I_{\text{з}}$, мкА},
+	minor tick num = 2,
+	grid = major
+]
+
+\addplot +[mark options = {scale = 0.1,}]
+	plot [error bars/.cd, y dir=both, x dir=both, y explicit, x explicit]
+	table [y error plus=y-max, y error minus=y-min, x error plus=x-max, x error minus=x-min] {\mytablea};
+\addplot +[mark options = {scale = 0.1,}]
+	plot [error bars/.cd, y dir=both, x dir=both, y explicit, x explicit]
+	table [y error plus=y-max, y error minus=y-min, x error plus=x-max, x error minus=x-min] {\mytableb};
+\addplot +[mark options = {scale = 0.1,}]
+	plot [error bars/.cd, y dir=both, x dir=both, y explicit, x explicit]
+	table [y error plus=y-max, y error minus=y-min, x error plus=x-max, x error minus=x-min] {\mytablec};
+\end{axis}
+\end{tikzpicture}
+}
+
+\par12) Полагая концентрацию элеткронов $n_e$ равной концентрации ионов $n_i$, определим её, используя формулу Бома:\\
+
+$$ I_i = 0,4n_e eS\sqrt{\frac{2kT_e}{m_i}}$$
+
+Где S = $\pi d l$ - площадь поверхности зонда, $m_i$ = 22$\cdot$1,66$\cdot 10^{-27}$ кг - масса иона неона.\\
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+	\hline
+	$I_p$, мА & S, ${\text{мм}}^2$ & $n_e$, $10^{16}{\text{м}}^{-3}$ \\
+	\hline
+	4.73 $\pm$ 0.01 & \multirow{3}{*}{3.27} & 7.0 $\pm$ 0.5\\
+    \cline{1-1} \cline{3-3}
+    2.99 $\pm$ 0.01 & & 3.9 $\pm$ 0.3 \\
+    \cline{1-1} \cline{3-3}
+    1.49 $\pm$ 0.01 & & 1.6 $\pm$ 0.1 \\
+	\hline
+\end{tabular}
+\end{center}
+
+\par13) Рассчитаем плазменную частоту колебаний электронов по формуле:\\
+
+$$ {\omega}_p = \sqrt{\frac{4\pi n_e e^2}{m_e}} = 5,6\cdot 10^4 \sqrt{n_e} \frac{\text{рад}}{\text{с}} [\text{СГС}]$$
+
+\begin{center}
+\begin{tabular}{|c|c|}
+	\hline
+	$I_p$, мА & ${\omega}_p$, $ 10^{9}\frac{\text{рад}}{\text{с}}$ \\	
+	\hline
+	4.73 $\pm$ 0.01 & 14.8 $\pm$ 0.5 \\
+	\hline
+	2.99 $\pm$ 0.01 & 11.1 $\pm$ 0.4 \\
+	\hline	
+	1.49 $\pm$ 0.01 & 7.1 $\pm$ 0.2 \\
+	\hline
+\end{tabular}
+\end{center}
+
+При падении на плазму электромагнитного излучения, через неё пройдут волны с частотами превышающими ${\omega}_p$.\\
+
+\par14) Рассчитаем электронную поляризационную длину $r_{D_e}$ по формуле: 
+
+$$ r_{D_e} = \sqrt{\frac{k T_e}{4\pi n_e e^2}} \text{см} $$
+
+А также дебаевский радиус экранирования $r_D$ используя формулу:
+
+$$ r_D = \sqrt{\frac{k T_i}{4\pi n_e e^2}} \text{см} $$
+
+Где $T_e >> T_i$, $T_i \approx 300K$ - температура ионов приблизительно равна комнатной\\
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+	\hline
+	$I_p$, мА & $r_{D_e}$, мкм & $r_D$, мкм\\
+    \hline
+    4.73 $\pm$ 0.01 & 43 $\pm$ 3 & 4.5 $\pm$ 0.1 \\
+    \hline
+    2.99 $\pm$ 0.01 & 69 $\pm$ 5 & 6.1 $\pm$ 0.1 \\
+    \hline
+    1.49 $\pm$ 0.01 & 111 $\pm$ 9 & 9.5 $\pm$ 0.1 \\
+	\hline
+\end{tabular}
+\end{center}
+
+Из полученных значений $r_D$ ($\approx 10^{-4}-10^{-3}$ см) видим, что плазму можно считать квазинейтральной.\\
+
+\par15) Оценим среднее число ионов в дебаевской сфере:\\
+
+$$ N_D = \frac{4}{3}\pi{r_D}^3n_i$$
+
+\begin{center}
+\begin{tabular}{|c|c|}
+	\hline
+	$I_p$, мА & $N_D$\\
+	\hline
+	4.73 $\pm$ 0.01 & 27 $\pm$ 4\\ 
+	\hline
+	2.99 $\pm$ 0.01 & 37 $\pm$ 5\\
+	\hline
+	1.49 $\pm$ 0.01 & 57 $\pm$ 5\\
+	\hline
+\end{tabular}
+\end{center}
+
+$N_D >> 1$, поэтому плазму можно считать идеальной. 
+
+\par16) Оценим степень ионизации плазмы (долю ионизированных атомов $\alpha$), если давление в трубке P$\approx$2 торр (2 мм.рт.ст.):\\
+
+$$\alpha = \frac{n_i}{n} \text{, где n - общее число частиц в единице объема (P = nk$T_i$)} $$
+
+\begin{center}
+\begin{tabular}{|c|c|}
+	\hline
+	$I_p$, мА & $\alpha$, $10^{-7}$\\
+	4.73 $\pm$ 0.01 & 10.9 $\pm$ 0.8 \\
+	\hline
+	2.99 $\pm$ 0.01 & 6.1 $\pm$ 0.5 \\
+	\hline
+	1.49 $\pm$ 0.01 & 2.5 $\pm$ 0.2 \\
+	\hline
+\end{tabular}
+\end{center}
+
+При нормальных условиях (P = 1 атм = 760 мм.рт.ст., T = 273,15 К) n = $N_{\text{л}}$ - число Лошмидта. 
+
+\par17) Построим графики зависимостей электронной температуры и концентрации электронов от тока разряда: $T_e(I_p)$, $n_e(I_p)$.\\
+
+\pgfplotstableread{
+x			y			y-min		y-max		x-min		x-max
+4.73		2.7			0.2			0.2			0.01		0.01
+2.99		3.9			0.3			0.3			0.01		0.01
+1.49		4.1			0.4			0.4			0.01		0.01
+}{\mytable}
+
+\resizebox{\columnwidth}{!}{
+\begin{tikzpicture}
+\begin{axis} [
+	title = $T_e(I_p)$,
+	xlabel = {$I_p$, мА},
+	ylabel = {$T_e$, $10^4$К},
+	minor tick num = 2,
+	grid = major
+]
+
+\addplot +[mark options = {scale = 0.1,}]
+	plot [error bars/.cd, y dir=both, x dir=both, y explicit, x explicit]
+	table [y error plus=y-max, y error minus=y-min, x error plus=x-max, x error minus=x-min] {\mytable};
+\end{axis}
+\end{tikzpicture}
+}
+
+\pgfplotstableread{
+x			y			y-min		y-max		x-min		x-max
+4.73		7			0.5			0.5			0.01		0.01
+2.99		3.9			0.3			0.3			0.01		0.01
+1.49		1.6			0.1			0.1			0.01		0.01
+}{\mytable}
+
+\resizebox{\columnwidth}{!}{
+\begin{tikzpicture}
+\begin{axis} [
+	title = $n_e(I_p)$,
+	xlabel = {$I_p$, мА},
+	ylabel = {$n_e$, $10^{16} {\text{м}}^{-3}$},
+	minor tick num = 2,
+	grid = major
+]
+
+\addplot +[mark options = {scale = 0.1,}]
+	plot [error bars/.cd, y dir=both, x dir=both, y explicit, x explicit]
+	table [y error plus=y-max, y error minus=y-min, x error plus=x-max, x error minus=x-min] {\mytable};
+\end{axis}
+
+\end{tikzpicture}
+}
+
+Откуда видим, что график $T_e(I_p)$ обладает большой погрешностью и конкретных выводов сделать нельзя. Из графика $n_e(I_p)$ видим, что концентрация электронов возрастает при увеличении тока разряда, поскольку чем выше электрическое поле, тем больше скорость электронов, а значит больше столкновений с молекулами газа, то есть ионов становится больше. 
+
+\par\textbf{Вывод}
+
+Результаты измерений:
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+	\hline
+	$I_p$, мА & $T_e$, $10^4$ К & $n_e$, $10^{16}$ ${\text{м}}^{-3}$ & ${\omega}_p$ $10^9$ $\frac{\text{рад}}{c}$ & $r_{D_e}$, мкм & $r_D$, мкм & $N_D$ & $\alpha$, $10^{-7}$ \\
+	\hline
+    4.73 $\pm$ 0.01 & 2.7 $\pm$ 0.2 & 7.0 $\pm$ 0.5 & 14.8 $\pm$ 0.5 & 43 $\pm$ 3 & 4.5 $\pm$ 0.1 & 27 $\pm$ 4 & 10.9 $\pm$ 0.8\\
+    \hline
+    2.99 $\pm$ 0.01 & 3.9 $\pm$ 0.3 & 3.9 $\pm$ 0.3 & 11.1 $\pm$ 0.4 & 69 $\pm$ 5 & 6.1 $\pm$ 0.1 & 37 $\pm$ 5 & 6.1 $\pm$ 0.5\\
+    \hline
+    1.49 $\pm$ 0.01 & 4.1 $\pm$ 0.4 & 1.6 $\pm$ 0.1 & 7.1 $\pm$ 0.2 & 111 $\pm$ 9 & 9.5 $\pm$ 0.1 & 57 $\pm$ 5 & 2.5 $\pm$ 0.2\\
+	\hline
+\end{tabular}
+\end{center}
 
 \end{document}
+
+
